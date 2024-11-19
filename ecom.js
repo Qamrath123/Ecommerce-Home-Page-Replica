@@ -100,21 +100,44 @@ setInterval(nextSlide, 5000);
 // Initial display
 showSlide(currentSlide);
 
-  const countrySelect = document.getElementById('country-select');
-
-  // Array of countries with flag codes and currency codes
-  const countries = [
-    { code: 'IN', currency: 'INR', flag: '🇮🇳' },
-    { code: 'US', currency: 'USD', flag: '🇺🇸' },
-    { code: 'EU', currency: 'EUR', flag: '🇪🇺' },
-    // Add more countries as needed
+const countries = [
+    { code: 'IN', name: 'India', flag: 'https://flagcdn.com/w40/in.png', currency: 'INR' },
+    { code: 'US', name: 'United States', flag: 'https://flagcdn.com/w40/us.png', currency: 'USD' },
+    { code: 'EU', name: 'European Union', flag: 'https://flagcdn.com/w40/eu.png', currency: 'EUR' },
   ];
-  
+
+  const dropdown = document.getElementById('dropdown');
+  const selected = document.getElementById('selected');
+  const options = document.getElementById('options');
+
+  // Populate dropdown options
   countries.forEach(country => {
-    const option = document.createElement('option');
-    option.value = country.code;
-    option.innerHTML = `${country.flag} ${country.currency}`;
-    countrySelect.appendChild(option);
+    const option = document.createElement('div');
+    option.classList.add('dropdown-option');
+    option.innerHTML = `
+      <img src="${country.flag}" alt="${country.name} Flag">
+      <span>${country.name} (${country.currency})</span>
+    `;
+    option.addEventListener('click', () => {
+      selected.innerHTML = `
+        <img src="${country.flag}" alt="${country.name} Flag">
+        <span>${country.name} (${country.currency})</span>
+      `;
+      options.style.display = 'none';
+    });
+    options.appendChild(option);
+  });
+
+  // Toggle dropdown
+  selected.addEventListener('click', () => {
+    options.style.display = options.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      options.style.display = 'none';
+    }
   });
 
 
