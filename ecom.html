@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazena Clone</title>
+    <link rel="stylesheet" href="./ecom.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <ul class="contact-info">
+                <li>Wish list</li>
+                <span> | </span>
+                <li>
+                    
+                    <div class="country-dropdown">
+                        <select id="country-select">
+                          <option value="INR" selected>🇮🇳 INR</option>
+                          </select>
+                      </div>
+                    <span>|</span>
+                </li>
+                <li>+123 4567 890</li>
+            </ul>
+            
+            <div class="free-delivery">
+                <span>Free Delivery On Order $200</span>
+            </div>
+            
+        </div>
+        <div class="separator"></div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./logo.webp" alt="Fazena Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Ethnic Wear</a></li>
+                    <li><a href="#">Western Wear</a></li>
+                    <li><a href="#">Jewellery</a></li>
+                    <li><a href="#">Beauty & Grooming</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span> 
+                
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div class="slider-inner">
+            <div class="slide active">
+                <img src="./slider-1.webp" alt="Slide 1">
+                <div class="slide-content">
+                    <!-- <h2>Headline 1</h2>
+                    <p>Description 1</p>
+                    <button>Shop Now</button> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./slider-3.webp" alt="Slide 2">
+                <div class="slide-content">
+                    <!-- <h2>Headline 2</h2>
+                    <p>Description 2</p>
+                    <button>Shop Now</button> -->
+                </div>
+            </div>
+        </div>
+        <!-- Slider Controls (2 dots for 2 slides) -->
+        <div class="slider-controls">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <section class="services">
+        <div class="service">
+            <i class="fas fa-paper-plane"></i>
+            <span>Free Shipping Worldwide</span>
+        </div>
+        <div class="service">
+            <i class="fas fa-headset"></i>
+            <span>24/7 Dedicated Support</span>
+        </div>
+        <div class="service">
+            <i class="fas fa-sync-alt"></i>
+            <span>Money Back Guarantee</span>
+        </div>
+        <div class="service">
+            <i class="fas fa-gift"></i>
+            <span>Member Discount</span>
+        </div>
+    </section>
+
+    
+
+    <section class="hero-section">
+        <!-- Tall Card -->
+        <div class="hero-card hero-card-tall">
+            <img src="../banner-1.webp" alt="Fashion Collection">
+            <div class="hero-card-content">
+                <h3>Introducing Fashion Collection</h3>
+                <p>We are a global housewares product design company.</p>
+                <a href="#" class="shop-now">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Short Card 1 -->
+        <div class="hero-card">
+            <img src="../banner-2.webp" alt="Stylish Purse Design">
+            <div class="hero-card-content"></div>
+        </div>
+
+        <!-- Short Card 2 -->
+        <div class="hero-card">
+            <img src="../banner-4 (1).webp" alt="Accessories Collection">
+            <div class="hero-card-content"></div>
+        </div>
+
+        <!-- Tall Card -->
+        <div class="hero-card hero-card-tall">
+            <img src="../banner-3.webp" alt="Men’s Shoes Collection">
+            <div class="hero-card-content">
+                <h3>Men’s Shoes Collection</h3>
+                <p>Explore the latest trends in men’s footwear.</p>
+                <a href="#" class="shop-now">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="featured-products">
+        <h2 class="top-product">Top Product</h2>
+        <div class="category-buttons">
+            <button id="featured-btn">Featured</button>
+            <button id="latest-btn">Latest</button>
+            <button id="bestseller-btn">Best Seller</button>
+        </div>
+        <!-- Product Container -->
+    <section id="product-container"  >
+        <!-- Products will be loaded here -->
+
+        
+    </section>
+
+    <div class="arrow-container">
+        <!-- Previous Arrow -->
+        <div class="prev-arrow">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <!-- Next Arrow -->
+        <div class="next-arrow">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <div class="testimonials-section">
+        <h2 class="title">Testimonials</h2>
+        <div class="quotes-wrapper">
+            <div class="testi owl-carousel owl-theme">
+                <!-- Testimonials will be dynamically injected here -->
+            </div>
+    
+    </div>
+
+    
+    <div class="deal-of-the-day">
+        <h2 class="deal-day">Deal Of The Day</h2>
+    </div>
+         <!-- Deal of the Day Section -->
+
+         <div class="deals-container"></div>
+
+    <!-- Modal HTML -->
+    <div class="overview-modal" id="overview-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeDeal()">×</button>
+            <img id="modal-image" src="" alt="Product Image">
+            <div class="modal-details">
+                <h2 id="modal-title">Product Title</h2>
+                <p id="modal-description">Product Description</p>
+                <div class="price" id="modal-price"></div>
+                <p><strong>Availability:</strong> <span id="modal-availability">In Stock</span></p>
+                <p><strong>Size:</strong> <span id="modal-size">M</span></p>
+                <p><strong>Color:</strong> <span id="modal-color">Red</span></p>
+                <p><strong>Quantity:</strong> <span id="modal-quantity">100</span></p>
+                <button class="button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deal of the Day Section -->
+   
+    <div class="deal-of-the-day">
+        <div class="deal-card"></div>
+        <div class="deal-card"></div>
+    </div>
+        <!-- Products will be loaded here -->
+
+        
+    </section>
+    
+    <div class="arrow-container">
+        <!-- Previous Arrow -->
+        <div class="prev-arrow">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <!-- Next Arrow -->
+        <div class="next-arrow">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+
+<section class="on-sale-products">
+        <!-- Enhanced On Sale heading -->
+        <h2 class="on-sale">
+            <span></span> On Sale <span></span>
+        </h2>
+        
+        <!-- Slider Container -->
+        <div class="slider-container2">
+            <div id="slider-track" class="slider-track">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    
+        <!-- Slider Navigation Buttons -->
+        <div class="slider-nav-container">
+            <button class="slider-nav" id="prev-btn">&#10094;</button>
+            <button class="slider-nav" id="next-btn">&#10095;</button>
+        </div>
+    </section>
+    
+
+    <section class="latest-blog">
+        <h2 class="latestblog">
+            <span></span> Latest Blog <span></span>
+        </h2>
+
+        <div class="slider-container1">
+            <div class="slider" id="slider"></div>
+            <div class="controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+    </section>
+
+
+    <section class="brand-carousel">
+        <h2 class="section-title"></h2>
+        <div class="owl-carousel custom-owl-theme">
+            <div class="item"><img src="../images/1L.webp" alt="Brand 1"></div>
+            <div class="item"><img src="../images/2L.webp" alt="Brand 2"></div>
+            <div class="item"><img src="../images/3L.avif" alt="Brand 3"></div>
+            <div class="item"><img src="../images/4L.avif" alt="Brand 4"></div>
+            <div class="item"><img src="../images/5L.avif" alt="Brand 5"></div>
+            <div class="item"><img src="../images/6L.webp" alt="Brand 6"></div>
+            <div class="item"><img src="../images/7L.avif" alt="Brand 7"></div>
+            <div class="item"><img src="../images/8L.webp" alt="Brand 8"></div>
+            <div class="item"><img src="../images/9L.avif" alt="Brand 9"></div>
+            <div class="item"><img src="../images/10L.avif" alt="Brand 10"></div>
+        </div>
+    </section>
+
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    
+    <!--FOOTER GOES HERE-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Demo Store United States</p>
+  <p><i class="fas fa-phone-alt"></i> 0123-456-789</p>
+  <p><i class="fas fa-envelope"></i> demo@demo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li>Featured Product</li>
+                    <li>Bestseller</li>
+                    <li>Latest Products</li>
+                    <li>Special Product</li>
+                    <li>On Sale</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Information</li>
+                    <li>Privacy & Policy</li>
+                    <li>Terms & Condition</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>You may unsubscribe at any moment. For that purpose, please find our contact info in the legal notice.</p>
+                <form>
+                    <input type="email" placeholder="Email address">
+                    <button class="subscribe" type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="./logo.webp" alt="Fazena Logo">
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024, Fazena
+            </div>
+            <div class="footer-payments">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./ecom.js" type="text/javascript">
+        
+        $(document).ready(function(){
+        $(".owl-carousel.custom-owl-theme").owlCarousel({
+            loop: true,             // Infinite loop
+            margin: 20,             // Space between items
+            nav: false,             // Show navigation arrows
+            dots: false,            // Disable dots navigation
+            autoplay: true,         // Enable autoplay
+            autoplayTimeout: 3000,  // Time between slides (3 seconds)
+            autoplayHoverPause: true, // Pause autoplay on hover
+            responsive: {           // Responsive breakpoints
+                0: {
+                    items: 2        // Show 2 items on small screens
+                },
+                600: {
+                    items: 4        // Show 4 items on medium screens
+                },
+                1000: {
+                    items: 6        // Show 6 items on large screens
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</html>
